@@ -21,18 +21,18 @@ export const actions: Actions = {
 
     const prompt = `${config.promptPrefix}${message}`;
 
-    try {
-      const chatMessage = await oraPromise(
-        proxy.sendMessage(prompt, {
-          parentMessageId: `${parentMessageId}`
-        })
-      );
+    // try {
+    //   const chatMessage = await oraPromise(
+    //     proxy.sendMessage(prompt, {
+    //       parentMessageId: `${parentMessageId}`
+    //     })
+    //   );
 
-      return chatMessage;
-    } catch (err) {
-      if (err instanceof ChatGPTError) {
-        throw error(err.statusCode || 400, err.message);
-      }
-    }
+    //   return chatMessage;
+    // } catch (err) {
+    //   if (err instanceof ChatGPTError) {
+    //     throw error(err.statusCode || 400, err.message);
+    //   }
+    // }
   }
 };

@@ -35,6 +35,34 @@
   afterUpdate(() => {
     scrollToBottom();
   });
+
+  function sendMessage(message: string) {
+    addMessage({
+      type: 'sent',
+      content: message?.toString()
+    });
+
+    addMessage({
+      type: 'received',
+      content: 'Thinking...',
+      isLoading: true
+    });
+
+    const response = fetch('http://localhost:5000', {
+      method: 'POST',
+      body: JSON.stringify({
+        id: 0,
+        message: message,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        "Access-Control-Allow-Origin": "*"
+      },
+    })
+    
+    return response;
+}
 </script>
 
 <svelte:head>
@@ -65,45 +93,24 @@
           const message = formData.get('message');
           form.reset();
 
-          addMessage({
-            type: 'sent',
-            content: message?.toString() || 'N/A'
-          });
+          if (message != null) {
+            sendMessage(message?.toString() || 'N/A').then((result) => {
 
-          addMessage({
-            type: 'received',
-            content: 'Thinking...',
-            isLoading: true
-          });
+              result.json().then(res => {
+                addMessage(
+                  {
+                    type: 'received',
+                    content: res || 'N/A'
+                  },
+                  true
+              )}
+              )
+            });
+          }
+        }
+        
+      }
 
-          // return async function ({ result }) {
-          //   console.log(result)
-
-          //   if (result.type === 'success') {
-          //     // To track the conversation we need to pass the parentMessageId. To do this we can use
-          //     // the parentMessageId from the response and pass it to an invisible input field which
-          //     // is then sent to the server on the subsequent request (see `<input type="hidden"` below)
-          //     parentMessageId = result?.data?.parentMessageId;
-
-          //     addMessage(
-          //       {
-          //         type: 'received',
-          //         content:
-          //           result.type === 'success'
-          //             ? result?.data?.text || 'N/A'
-          //             : 'Something went wrong! Please try again later.'
-          //       },
-          //       true
-          //     );
-          //   }
-          // };
-
-          return async function logJSONData() {
-            const result = await fetch('http://localhost:5000');
-            const jsonData = await result.json()
-            console.log(jsonData);
-          };
-        }}
       >
         <input type="hidden" name="parentMessageId" bind:value={parentMessageId} />
         <TextArea />
