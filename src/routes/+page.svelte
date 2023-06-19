@@ -95,7 +95,6 @@
 
           if (message != null) {
             sendMessage(message?.toString() || 'N/A').then((result) => {
-
               result.json().then(res => {
                 addMessage(
                   {
@@ -103,16 +102,12 @@
                     content: res || 'N/A'
                   },
                   true
-              )}
-              )
+              )})
             });
           }
-        }
-        
-      }
-
+        }}
       >
-        <input type="hidden" name="parentMessageId" bind:value={parentMessageId} />
+        <input type="hidden" name="parentMessageId" bind:value={parentMessageId}/>
         <TextArea />
         <SubmitButton />
       </form>
