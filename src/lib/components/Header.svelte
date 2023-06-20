@@ -5,11 +5,7 @@
 </script>
 
 <header>
-  <div class="corner">
-    <a href="https://kit.svelte.dev">
-      <img src={logo} alt="SvelteKit" />
-    </a>
-  </div>
+  <div class="corner"> </div>
 
   <nav>
     <svg viewBox="0 0 2 3" aria-hidden="true">
@@ -29,7 +25,7 @@
   </nav>
 
   <div class="corner">
-    <a href="https://github.com/WillKre/create-svelte-chatgpt">
+    <a href="https://github.com/FCL-LM">
       <img src={github} alt="GitHub" />
     </a>
   </div>

@@ -1,41 +1,83 @@
 <svelte:head>
   <title>About</title>
-  <meta name="description" content="About this app" />
+  <meta name="description" content="About this project" />
 </svelte:head>
 
 <div class="text-column">
   <h1 class="mb-8">About</h1>
 
+  <h2 class="mt-4 mb-4 font-bold">The project</h2>
   <p>
-    This is a <a href="https://kit.svelte.dev">SvelteKit</a> app with built-in support for
-    <a href="https://tailwindcss.com">TailwindCSS</a> and
-    <a href="https://openai.com/api/">ChatGPT</a>. You can make your own by typing the following
-    into your command line and following the prompts:
+    <a href=https://github.com/FCL-LM>FCL-LM</a> is a distributed <a href=https://github.com/imartinez/privateGPT>privateGPT</a> 
+    re-implementation that makes you able to easily use every kind of LLM to query your
+    documents, born as project for the <b>Cloud Systems</b> subject of the Computer Science Master 
+    Course at <i>University of Catania</i>. 
   </p>
 
-  <pre class="my-8">npx create-svelte-chatgpt@latest</pre>
-
+  <h2 class="mt-4 mb-4 font-bold">The authors</h2>
   <p>
-    The page you're looking at is purely static HTML, with no client-side interactivity needed.
-    Because of that, we don't need to load any JavaScript. Try viewing the page's source, or opening
-    the devtools network panel and reloading.
+    The acronym <b>FCL</b> stands for <i><b>F</b>erro</i>-<i><b>C</b>arnemolla</i>-<i><b>L</b>o Cicero</i>,
+    the students who gave birth to this project.
   </p>
 
-  <h2 class="mt-4 mb-4 font-bold">TailwindCSS</h2>
-  <p>
-    TailwindCSS is a utility-first CSS framework that allows you to build custom designs quickly and
-    easily. It comes preconfigured in this app, allowing you to use its utility classes to style
-    your components.
-  </p>
+  <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+    <a href=https://github.com/nebuchadneZZar01>
+      <div class="relative flex items-center space-x-4">
+        <div class="relative">
+          <img
+            src=https://avatars.githubusercontent.com/u/65019865?v
+            alt="midjourney generated portrait"
+            class="w-10 sm:w-16 h-10 sm:h-16 rounded-full"
+          />
+        </div>
+        <div class="flex flex-col leading-tight">
+          <div class="text-2xl mt-1 flex items-center">
+            <span class="text-gray-700 mr-3">Michele Ferro</span>
+          </div>
+          <span class="text-lg text-gray-600">nebuchadneZZar01</span>
+        </div>
+      </div>
+    </a>
+  </div>
 
-  <h2 class="mt-4 mb-4 font-bold">ChatGPT</h2>
-  <p>
-    ChatGPT is a powerful language model developed by OpenAI. This app leverages ChatGPT to provide
-    AI-powered conversation and content generation capabilities. To interact with ChatGPT, we're
-    using the
-    <a href="https://github.com/transitive-bullshit/chatgpt-api">chatgpt-api</a> package through the
-    use of
-    <a href="https://kit.svelte.dev/docs/form-actions">Svelte Form Actions</a> and Redis (via
-    <a href="https://github.com/jaredwray/keyv">Keyv</a>) to achieve persistance.
-  </p>
+  <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+    <a href=https://github.com/Herbrant>
+      <div class="relative flex items-center space-x-4">
+        <div class="relative">
+          <img
+            src=https://avatars.githubusercontent.com/u/5670917?v
+            alt="midjourney generated portrait"
+            class="w-10 sm:w-16 h-10 sm:h-16 rounded-full"
+          />
+        </div>
+        <div class="flex flex-col leading-tight">
+          <div class="text-2xl mt-1 flex items-center">
+            <span class="text-gray-700 mr-3">Davide Carnemolla</span>
+          </div>
+          <span class="text-lg text-gray-600">Herbrant</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+    <a href=https://github.com/josura>
+      <div class="relative flex items-center space-x-4">
+        <div class="relative">
+          <img
+            src=https://avatars.githubusercontent.com/u/32990123?v
+            alt="midjourney generated portrait"
+            class="w-10 sm:w-16 h-10 sm:h-16 rounded-full"
+          />
+        </div>
+        <div class="flex flex-col leading-tight">
+          <div class="text-2xl mt-1 flex items-center">
+            <span class="text-gray-700 mr-3">Giorgio Lo Cicero</span>
+          </div>
+          <span class="text-lg text-gray-600">josura</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
 </div>
