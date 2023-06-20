@@ -6,6 +6,7 @@
   import Profile from '$lib/components/Profile.svelte';
   import SubmitButton from '$lib/components/SubmitButton.svelte';
   import Message from '$lib/components/Message.svelte';
+  import { PUBLIC_FLASK_ENDPOINT } from '$env/static/public';
 
   type Message = {
     type: 'received' | 'sent';
@@ -48,7 +49,7 @@
       isLoading: true
     });
 
-    const response = fetch('http://localhost:5000', {
+    const response = fetch(PUBLIC_FLASK_ENDPOINT, {
       method: 'POST',
       body: JSON.stringify({
         id: 0,
