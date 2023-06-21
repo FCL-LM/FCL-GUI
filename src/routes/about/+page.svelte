@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>About</title>
+  <title>FCL-LM WebGUI | About</title>
   <meta name="description" content="About this project" />
 </svelte:head>
 
@@ -16,7 +16,7 @@
 
   <h2 class="mt-4 mb-4 font-bold">The authors</h2>
   <p>
-    The acronym <b>FCL</b> stands for <i><b>F</b>erro</i>-<i><b>C</b>arnemolla</i>-<i><b>L</b>o Cicero</i>,
+    The acronym <b>FCL</b> stands for <i><b>F</b>erro</i>-<i><b>C</b>arnemolla</i>-<i><b>L</b>ocicero</i>,
     the students who gave birth to this project.
   </p>
 

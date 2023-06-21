@@ -68,7 +68,7 @@
 </script>
 
 <svelte:head>
-  <title>SvelteGPT</title>
+  <title>FCL-LM WebGUI</title>
 </svelte:head>
 
 <div
