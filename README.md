@@ -4,7 +4,7 @@
 version: "3"
 services:
   fcl-gui:
-    image: ghcr.io/fcl-lm/fcl-svelte-webgui:main
+    image: ghcr.io/fcl-lm/fcl-gui:main
     ports:
       - 3000:3000
     environment:
