@@ -1,6 +1,8 @@
 # A GUI for FCL-LM
 FCL-GUI is a GUI written in Typescript (using the SvelteKit framework) for FCL-LM.
 
+![image](gui_screen.png)
+
 ## Running with docker-compose
 ```yaml
 version: "3"
